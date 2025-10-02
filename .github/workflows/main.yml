@@ -1,0 +1,16 @@
+name: Email Test Workflow
+
+on:
+  push:
+    branches:
+      - main  # or any branch you want to trigger it
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 24f2005506@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
