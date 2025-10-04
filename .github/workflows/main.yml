@@ -1,30 +1,17 @@
-name: Cache Demo Workflow
+name: IITM Action Test
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+  workflow_dispatch:
 
 jobs:
-  cache-test:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # Step to prime cache
-      - name: prime-cache-14d3547
-        id: cache-step
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm  # Example: caching npm dependencies
-          key: cache-14d3547
-
-      # Step to echo cache hit/miss
-      - name: Show cache result
-        run: |
-          if [ -n "${{ steps.cache-step.outputs.cache-hit }}" ]; then
-            echo "Cache hit!"
-          else
-            echo "Cache miss!"
-          fi
+      - name: 24f2005506@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
